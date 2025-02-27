@@ -6,7 +6,7 @@ export default function HomeLayout() {
 
     useEffect(() => {
         const updateMousePosition = (e) => {
-            setMousePos({ x: e.clientX, y: e.clientY });
+            setMousePos({ x: e.clientX, y: e.clientY + window.scrollY});
         };
 
         window.addEventListener("mousemove", updateMousePosition);
@@ -17,13 +17,13 @@ export default function HomeLayout() {
 
 
     return (<>
-        <div className="relative bg-[#0f172a] text-white
+        <div className="relative bg-[#170724] text-white
          flex justify-end
          overflow-clip
          ">
             {/* Glow Effect */}
             <div
-                className="absolute w-72 h-72 bg-[#696a6c] rounded-full opacity-30 blur-3xl pointer-events-none transition-transform duration-100"
+                className="absolute w-72 h-72 bg-[#bd62fe49] rounded-full opacity-30 blur-3xl pointer-events-none transition-transform duration-100"
                 style={{
                     left: mousePos.x - 150,
                     top: mousePos.y - 150,
