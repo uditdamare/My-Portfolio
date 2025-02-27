@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Profile from "./Profile";
 import Details from "./Details";
 export default function HomeLayout() {
@@ -12,9 +12,15 @@ export default function HomeLayout() {
         window.addEventListener("mousemove", updateMousePosition);
         return () => window.removeEventListener("mousemove", updateMousePosition);
     }, []);
-    useEffect(()=>{console.log("page loaded");})
+    useEffect(() => { console.log("page loaded"); });
+
+
+
     return (<>
-        <div className="relative bg-[#0f172a] min-h-screen min-w-[100vw] text-white lg:flex justify-center overflow-hidden">
+        <div className="relative bg-[#0f172a] text-white
+         flex justify-end
+         overflow-clip
+         ">
             {/* Glow Effect */}
             <div
                 className="absolute w-72 h-72 bg-[#696a6c] rounded-full opacity-30 blur-3xl pointer-events-none transition-transform duration-100"
@@ -25,8 +31,16 @@ export default function HomeLayout() {
             ></div>
 
             {/* Content */}
-            <Profile/>
-            <Details/>
+            <div className="h-screen top-0 left-0 w-1/2  sticky
+            lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24
+            ">
+                <Profile />
+            </div>
+            {/* <div className="" > */}
+            <div className="w-1/2">
+                <Details />
+                {/* </div> */}
+            </div>
 
         </div>
     </>)
