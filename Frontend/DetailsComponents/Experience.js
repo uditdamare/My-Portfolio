@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export default function Experience() {
     const exprecord = [
         {
@@ -26,10 +28,32 @@ export default function Experience() {
         }
     ]
     return (<>
-        <div className="experience">
+        <div className="experience mb-10">
             {
                 exprecord.map((a, i) => <ExperienceCard data={a} />)
             }
+
+            <a
+                href={"https://drive.google.com/file/d/1HWG0kbRYHltJLCESucuycVpk-0hM3oht/view?usp=sharing"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" text-white font-semibold w-fit px-4 duration-300 flex
+                hover:text-purple-400 transition-colors
+                "
+            >
+                View Full Resume
+                {/* <Image className="text-white  w-5 h-5 "
+                    src="/Assets/arrow-up-right-lucide.svg"
+                    height={300}
+                    width={300}
+                    color={"#FFFFFF"}
+                /> */}
+                {/* <div className=""> */}
+                    <svg
+                    className="text-white  transition-all transform  group-hover:translate-x-1 group-hover:-translate-y-4 group-hover:text-purple-400"
+                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg>
+                {/* </div> */}
+            </a>
         </div>
     </>)
 };
@@ -46,15 +70,15 @@ const ExperienceCard = ({ data }) => {
                 </div>
                 <div className="content mb-4">
 
-                {data.content}
+                    {data.content}
                 </div>
                 <div className="tags grid grid-cols-4 gap-2">
                     {
-                        data.tags.map((a)=>{
+                        data.tags.map((a) => {
                             return <>
-                            <div className="rounded-full bg-[#8585852f] font-semibold text-[14px] text-center py-1 px-2">
-                            {a}
-                            </div>
+                                <div className="rounded-full bg-[#8585852f] font-semibold text-[14px] text-center py-1 px-2">
+                                    {a}
+                                </div>
                             </>
                         })
                     }
