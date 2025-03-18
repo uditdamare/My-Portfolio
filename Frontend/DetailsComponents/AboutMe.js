@@ -3,8 +3,8 @@ export default function AboutMe() {
 
     return (
         <>
-            <div className="">
-                <p className="mb-4 border-2 border-black">
+            <div className=" border-2 border-white h-[75vh] justify-center flex flex-col">
+                <p className="mb-4">
                     I’m a MERN developer passionate about building performant, accessible, and scalable web applications. I thrive at the intersection of design and development, crafting seamless user experiences that balance aesthetics with efficiency. With a strong foundation in JavaScript, TypeScript, and modern frontend frameworks, I focus on delivering clean, maintainable, and high-quality code.
                 </p>
                 <p className="mb-4">
