@@ -28,7 +28,7 @@ export default function Experience() {
         }
     ]
     return (<>
-        <div className="experience mb-10">
+        <div className="experience pt-5 mb-10" id="experience">
             {
                 exprecord.map((a, i) => <ExperienceCard data={a} />)
             }
