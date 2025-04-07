@@ -37,7 +37,7 @@ export default function Experience() {
                 href={"https://drive.google.com/file/d/1HWG0kbRYHltJLCESucuycVpk-0hM3oht/view?usp=sharing"}
                 target="_blank"
                 rel="noopener noreferrer"
-                className=" text-white font-semibold w-fit px-4 duration-300 flex text-[20px]
+                className=" text-white font-semibold w-fit px-4 duration-300 flex text-[20px] mt-5
                 hover:text-purple-400 transition-colors group
                 "
             >
