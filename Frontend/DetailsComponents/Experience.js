@@ -60,10 +60,13 @@ export default function Experience() {
 
 const ExperienceCard = ({ data }) => {
     return (<>
-        <div className="card flex mb-4 hover:bg-[#64585859] rounded-2xl my-4 p-4
-        group
-         shadow-xl transition-all duration-100 hover:shadow-2xl hover:-translate-y-0 hover:border-2 hover:border-[#6565655a] border-2 border-[#65656500]
-        ">
+    <div className="group relative p-6 rounded-lg border border-transparent hover:border-white transition-all duration-300">
+                <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 group-hover:shadow-[0_0_20px_4px_rgba(255,255,255,0.5)] transition-all duration-500 pointer-events-none"></div>
+            
+        <div className="card flex my-4 p-4 ">
+            {/* group border border-transparent hover:border-white transition-all duration-300 */}
+            <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 group-hover:shadow-[0_0_20px_4px_rgba(255,255,255,0.5)] transition-all duration-500 pointer-events-none"></div>
+
             <div className="left max-w-[35%] min-w-[35%] text-[#7f7d7f] text-center flex justify-start pt-1 group-hover:text-white ">
                 {data.date}
             </div>
@@ -89,6 +92,7 @@ const ExperienceCard = ({ data }) => {
                     }
                 </div>
             </div>
+        </div>
         </div>
 
     </>)
