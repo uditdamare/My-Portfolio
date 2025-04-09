@@ -3,6 +3,8 @@
 // import HomeLayout from "../../Frontend/HomeLayout";
 
 import HomeLayout from "../../Frontend/HomeLayout";
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -17,6 +19,8 @@ import HomeLayout from "../../Frontend/HomeLayout";
 export default function Home() {
   return (
     <>
+     <Analytics/>
+     <SpeedInsights/>
     <HomeLayout/>
      </>
   );
