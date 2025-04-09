@@ -18,8 +18,8 @@ export default function HomeLayout() {
 
     return (<>
         <div className="relative bg-[#170724] text-white
-         flex justify-end
-         overflow-clip
+         md:flex md:justify-end
+         md:overflow-clip
          ">
             {/* Glow Effect */}
             <div
@@ -31,13 +31,17 @@ export default function HomeLayout() {
             ></div>
 
             {/* Content */}
-            <div className="h-screen top-0 left-0 w-1/2  sticky
+            <div className="hidden md:block h-screen top-0 left-0 md:w-1/2  sticky
             lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24
             ">
                 <Profile />
             </div>
+                <div className="md:hidden border border-red-400">
+                <Profile />
+
+                </div>
             {/* <div className="" > */}
-            <div className="w-1/2">
+            <div className="md:w-1/2">
                 <Details />
                 {/* </div> */}
             </div>
