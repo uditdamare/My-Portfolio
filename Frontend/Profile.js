@@ -2,6 +2,10 @@ import Image from "next/image";
 
 // import lc from ''
 export default function Profile() {
+    function scrollToDiv(tt) {
+        if (document.getElementById(tt))    
+            document.getElementById(tt).scrollIntoView({ behavior: 'smooth' });
+    }
     return (<>
         <div className="lg:min-w-[50%] text-white">
             <div className="p-[40px]">
@@ -10,8 +14,8 @@ export default function Profile() {
                 <p className="text-[16px] mb-3 max-w-[80%]">Experienced MERN Stack Developer with 2 years of expertise in building scalable web applications, optimizing SEO and Core Web Vitals, and developing microservices using Spring Boot for backend solutions. </p>
                 <nav class="nav hidden lg:block" aria-label="In-page jump links">
                     <ul class="mt-16 w-max">
-                        <li>
-                            <a class="group flex items-center py-3" href="#about">
+                        <li className="" onClick={() => { scrollToDiv('about') }}>
+                            <a class="group flex items-center py-3" >
                                 <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16  group-focus-visible:bg-slate-200 motion-reduce:transition-none">
                                 </span>
                                 <span class="nav-text text-xs font-bold uppercase tracking-widest text-white group-hover:text-slate-200 group-focus-visible:text-slate-200">
@@ -19,8 +23,8 @@ export default function Profile() {
                                 </span>
                             </a>
                         </li>
-                        <li>
-                            <a class="group flex items-center py-3" href="#experience">
+                        <li onClick={() => { scrollToDiv('experience') }}>
+                            <a class="group flex items-center py-3" >
                                 <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none">
 
                                 </span>
@@ -31,7 +35,16 @@ export default function Profile() {
                             </a>
                         </li>
                         <li>
-                            <a class="group flex items-center py-3" href="#projects">
+                            <a class="group flex items-center py-3" onClick={() => { scrollToDiv('leetcode') }}>
+                                <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none">
+                                </span><span class="nav-text text-xs font-bold uppercase tracking-widest text-white group-hover:text-slate-200 group-focus-visible:text-slate-200">
+                                    LeetCode
+
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="group flex items-center py-3"onClick={() => { scrollToDiv('projects') }} >
                                 <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none">
                                 </span><span class="nav-text text-xs font-bold uppercase tracking-widest text-white group-hover:text-slate-200 group-focus-visible:text-slate-200">
                                     Projects

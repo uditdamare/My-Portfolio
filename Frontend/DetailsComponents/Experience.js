@@ -28,7 +28,7 @@ export default function Experience() {
         }
     ]
     return (<>
-        <div className="experience mb-10">
+        <div className="experience pt-5 mb-10" id="experience">
             {
                 exprecord.map((a, i) => <ExperienceCard data={a} />)
             }
@@ -37,8 +37,8 @@ export default function Experience() {
                 href={"https://drive.google.com/file/d/1HWG0kbRYHltJLCESucuycVpk-0hM3oht/view?usp=sharing"}
                 target="_blank"
                 rel="noopener noreferrer"
-                className=" text-white font-semibold w-fit px-4 duration-300 flex text-[20px]
-                hover:text-purple-400 transition-colors
+                className=" text-white font-semibold w-fit px-4 duration-300 flex text-[20px] mt-5
+                hover:text-purple-400 transition-colors group
                 "
             >
                 View Full Resume
@@ -50,7 +50,7 @@ export default function Experience() {
                 /> */}
                 {/* <div className=""> */}
                 <svg
-                    className="text-white  transition-all transform  group-hover:translate-x-1 group-hover:-translate-y-4 group-hover:text-purple-400"
+                    className="text-white  transition-all transform  group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-purple-400"
                     xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg>
                 {/* </div> */}
             </a>
@@ -60,10 +60,13 @@ export default function Experience() {
 
 const ExperienceCard = ({ data }) => {
     return (<>
-        <div className="card flex mb-4 hover:bg-[#64585859] rounded-2xl my-4 p-4
-        group
-         shadow-xl transition-all duration-100 hover:shadow-2xl hover:-translate-y-0 hover:border-2 border-[#6565655a] border-0
-        ">
+    <div className="group relative p-6 rounded-lg border border-transparent hover:border-white transition-all duration-300">
+                <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 group-hover:shadow-[0_0_20px_4px_rgba(255,255,255,0.5)] transition-all duration-500 pointer-events-none"></div>
+            
+        <div className="card flex my-4 p-4 ">
+            {/* group border border-transparent hover:border-white transition-all duration-300 */}
+            <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 group-hover:shadow-[0_0_20px_4px_rgba(255,255,255,0.5)] transition-all duration-500 pointer-events-none"></div>
+
             <div className="left max-w-[35%] min-w-[35%] text-[#7f7d7f] text-center flex justify-start pt-1 group-hover:text-white ">
                 {data.date}
             </div>
@@ -89,6 +92,7 @@ const ExperienceCard = ({ data }) => {
                     }
                 </div>
             </div>
+        </div>
         </div>
 
     </>)
